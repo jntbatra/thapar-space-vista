@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <rect width="600" height="360" rx="12" fill="#fff"/>
+  <g transform="translate(40,30)">
+    <rect width="520" height="300" rx="8" fill="#fff" stroke="#E5E7EB"/>
+    <g transform="translate(30,30)">
+      <rect x="10" y="110" width="120" height="90" rx="6" fill="#34D399"/>
+      <rect x="150" y="80" width="120" height="120" rx="6" fill="#60A5FA"/>
+      <rect x="290" y="130" width="160" height="70" rx="6" fill="#FBBF24"/>
+      <text x="0" y="260" font-family="Inter, Arial, sans-serif" font-size="18" fill="#111827">Unsustainable agricultural practices</text>
+    </g>
+  </g>
+</svg>

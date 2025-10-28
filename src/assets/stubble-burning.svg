@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" rx="12" fill="#fff"/>
+  <g transform="translate(40,30)">
+    <rect width="520" height="300" rx="8" fill="#fff" stroke="#E5E7EB"/>
+    <g transform="translate(30,30)">
+      <path d="M20 170 C80 120, 160 120, 220 170" stroke="#F97316" stroke-width="18" stroke-linecap="round" fill="none"/>
+      <path d="M70 110 C90 70, 130 70, 150 110" stroke="#FB923C" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <rect x="40" y="180" width="220" height="10" rx="2" fill="#374151"/>
+      <rect x="270" y="180" width="80" height="10" rx="2" fill="#374151"/>
+      <text x="0" y="260" font-family="Inter, Arial, sans-serif" font-size="18" fill="#111827">Stubble burning</text>
+    </g>
+  </g>
+</svg>
