@@ -45,7 +45,7 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in animation-delay-800 mb-20">
-          <Link to="/infra">
+          <Link to="/news">
             <Button size="lg" className="text-lg px-8 py-6 group shadow-lg">
               Explore Mission
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
