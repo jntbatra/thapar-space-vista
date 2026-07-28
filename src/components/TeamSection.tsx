@@ -185,15 +185,18 @@ const TeamSection = () => {
         <Separator className="my-8" />
 
         {/* Student Contribution */}
-        <div className="elegant-card p-8 md:p-12 rounded-xl text-center max-w-2xl mx-auto">
+        <div className="elegant-card p-8 md:p-12 rounded-xl text-center max-w-4xl mx-auto">
           <div className="text-6xl font-bold text-gradient mb-4">100+</div>
           <p className="text-xl text-foreground font-medium mb-2">
             Students Involved
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-4">
             Over a period of 3 years, more than 100 students have contributed to
             the ThaparSat project, gaining hands-on experience in satellite
             technology and space science.
+          </p>
+          <p className="text-sm text-muted-foreground/80 italic mt-4">
+            Core contributors include: Kanishk Aggarwal, Varun Kapila, Abha Dewan, Mili Supreet, Anamika Bharali, Anmol Chopra, Anuj Sethi, Nitish Kumar Soni, Piyush Gupta, Piyush Kumar, Prakhar Srivastava, Rashampreet Singh, Mehak Dhiman, Monik Singla, Nitish Garg, Aditi Kapur, Arihant Jain, Chetandeep Singh, Sahil Manuja, Tamandeep Singh.
           </p>
         </div>
       </div>
