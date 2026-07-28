@@ -24,13 +24,13 @@ const InfrastructureSection = () => {
   return (
     <section id="infrastructure" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
             <Package className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">
               Infrastructure
             </span>
-          </div>
+          </header>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             World-Class <span className="text-gradient">Facilities</span>
@@ -75,6 +75,8 @@ const InfrastructureSection = () => {
                 src={satelliteMonitoring}
                 alt="Satellite Monitoring Station"
                 className="w-full rounded-lg mb-6"
+                loading="lazy"
+                decoding="async"
               />
               <h4 className="text-2xl font-bold mb-4 text-foreground">
                 Key Components
@@ -101,6 +103,8 @@ const InfrastructureSection = () => {
                     src={groundStation}
                     alt="Ground Station"
                     className="w-full rounded-lg mb-4"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <h5 className="font-bold text-lg mb-2 text-foreground">
                     THAPARSAT Antenna
@@ -158,6 +162,8 @@ const InfrastructureSection = () => {
                 src={irCamera}
                 alt="IR Camera"
                 className="w-full rounded-lg shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -174,6 +180,8 @@ const InfrastructureSection = () => {
                 src={satelliteTesting}
                 alt="Satellite Testing Area"
                 className="w-full rounded-lg mb-6"
+                loading="lazy"
+                decoding="async"
               />
               <h4 className="text-xl font-bold mb-2 text-foreground">
                 CUBESAT (THAPARSAT PROJECT)

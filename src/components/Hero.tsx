@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Satellite } from "lucide-react";
-import thaparLogo from "@/assets/thaparsat-logo.png";
-import tietLogo from "@/assets/tiet-logo.png";
 import videoSrc from "@/assets/videoplayback.webm";
 import { Link } from "react-router-dom";
 
@@ -16,6 +14,8 @@ const Hero = () => {
         loop
         muted
         playsInline
+        aria-label="ThaparSAT mission background video"
+        preload="metadata"
       />
 
       {/* Overlay to mute the video for better text readability */}

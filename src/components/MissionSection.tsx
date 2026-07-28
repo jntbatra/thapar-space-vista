@@ -1,12 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Target } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import stubbleImg from "@/assets/stubble-burning.webp";
 import unsustainImg from "@/assets/unsustainable-agriculture.jpg";
 import wasteImg from "@/assets/industrial-solid-waste.jpg";
@@ -186,6 +180,8 @@ const MissionSection = () => {
                     src={image}
                     alt={title}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/40 to-transparent group-hover:opacity-75 transition-opacity" />
                   <div className="absolute inset-0 flex flex-col justify-start p-6 z-10">

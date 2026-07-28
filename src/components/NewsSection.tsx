@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -63,8 +63,8 @@ const NewsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {newsItems.map((item, index) => (
-            <Card
+          {newsItems.map((item) => (
+            <article
               key={item.id}
               className="bg-card border border-border hover:border-accent/30 transition-all duration-300 group overflow-hidden"
             >
@@ -74,6 +74,8 @@ const NewsSection = () => {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -97,12 +99,13 @@ const NewsSection = () => {
                 <Button
                   variant="ghost"
                   className="group/btn p-0 h-auto text-accent hover:text-accent/80"
+                  aria-label={`Read more about ${item.title}`}
                 >
                   Read More
                   <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
-            </Card>
+            </article>
           ))}
         </div>
       </div>

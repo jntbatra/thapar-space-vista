@@ -16,6 +16,7 @@ const Navigation = () => {
     { name: "Home", href: "/" },
     { name: "Team", href: "/team" },
     { name: "News", href: "/news" },
+    { name: "Infrastructure", href: "/infra" },
   ];
 
   return (
@@ -32,15 +33,21 @@ const Navigation = () => {
             <Link to="/">
               <img
                 src={thaparSatLogo}
-                alt="ThaparSat"
+                alt="ThaparSAT logo"
                 className={isHome ? "w-auto h-20" : "w-auto h-20"}
+                width={320}
+                height={80}
+                decoding="async"
               />
             </Link>
-            <a href="https://www.thapar.edu/">
+            <a href="https://www.thapar.edu/" rel="noopener noreferrer">
               <img
                 src={isHome ? thaparLogo : tiLogo}
-                alt="Thapar Institute"
+                alt="Thapar Institute of Engineering and Technology logo"
                 className={isHome ? "w-auto h-11" : "w-auto h-11"}
+                width={220}
+                height={44}
+                decoding="async"
               />{" "}
             </a>
           </div>
@@ -48,9 +55,9 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={`transition-colors relative group ${
                   isHome
                     ? "text-white/80 hover:text-white"
@@ -59,11 +66,12 @@ const Navigation = () => {
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-              </a>
+              </Link>
             ))}
             <Button
               size="sm"
               className="bg-destructive hover:bg-destructive/90"
+              aria-label="Contact ThaparSAT team by email"
               onClick={() => {
                 window.location.href =
                   "mailto:contact@thapar.edu?cc=mamta.gulati@thapar.edu";
@@ -77,6 +85,9 @@ const Navigation = () => {
           <button
             className={`md:hidden p-2 ${isHome ? "text-white" : "text-black"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation-menu"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -89,15 +100,16 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div
+            id="mobile-navigation-menu"
             className={`md:hidden py-4 border-t animate-slide-in ${
               isHome ? "border-white/10" : "border-gray-200"
             }`}
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className={`py-2 transition-colors ${
                     isHome
                       ? "text-white/80 hover:text-white"
@@ -106,11 +118,12 @@ const Navigation = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <Button
                 size="sm"
                 className="bg-destructive hover:bg-destructive/90 w-full"
+                aria-label="Contact ThaparSAT team by email"
                 onClick={() => {
                   window.location.href =
                     "mailto:contact@thapar.edu?cc=mamta.gulati@thapar.edu";
