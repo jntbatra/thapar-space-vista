@@ -30,7 +30,7 @@ const InfrastructureSection = () => {
             <span className="text-sm font-medium text-primary">
               Infrastructure
             </span>
-          </header>
+          </div>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             World-Class <span className="text-gradient">Facilities</span>
@@ -40,7 +40,7 @@ const InfrastructureSection = () => {
             Fully equipped monitoring station and development center at TIET
             Patiala campus
           </p>
-        </div>
+        </header>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-20">
