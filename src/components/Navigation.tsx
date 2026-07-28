@@ -68,17 +68,15 @@ const Navigation = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </Link>
             ))}
-            <Button
-              size="sm"
-              className="bg-destructive hover:bg-destructive/90"
-              aria-label="Contact ThaparSAT team by email"
-              onClick={() => {
-                window.location.href =
-                  "mailto:contact@thapar.edu?cc=mamta.gulati@thapar.edu";
-              }}
-            >
-              Contact
-            </Button>
+            <Link to="/contact">
+              <Button
+                size="sm"
+                className="bg-destructive hover:bg-destructive/90"
+                aria-label="Contact ThaparSAT team"
+              >
+                Contact
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,8 +99,8 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div
             id="mobile-navigation-menu"
-            className={`md:hidden py-4 border-t animate-slide-in ${
-              isHome ? "border-white/10" : "border-gray-200"
+            className={`md:hidden absolute left-4 right-4 top-full mt-2 p-6 rounded-2xl border shadow-2xl backdrop-blur-2xl animate-slide-in ${
+              isHome ? "bg-black/60 border-white/10" : "bg-white/90 border-black/5"
             }`}
           >
             <div className="flex flex-col gap-4">
@@ -120,18 +118,16 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button
-                size="sm"
-                className="bg-destructive hover:bg-destructive/90 w-full"
-                aria-label="Contact ThaparSAT team by email"
-                onClick={() => {
-                  window.location.href =
-                    "mailto:contact@thapar.edu?cc=mamta.gulati@thapar.edu";
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                Contact
-              </Button>
+              <Link to="/contact" className="w-full">
+                <Button
+                  size="sm"
+                  className="bg-destructive hover:bg-destructive/90 w-full"
+                  aria-label="Contact ThaparSAT team"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Button>
+              </Link>
             </div>
           </div>
         )}

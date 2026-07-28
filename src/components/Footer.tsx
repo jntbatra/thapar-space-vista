@@ -36,6 +36,7 @@ const Footer = () => {
                 { label: "Team", href: "/team" },
                 { label: "News", href: "/news" },
                 { label: "Infrastructure", href: "/infra" },
+                { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -55,7 +56,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 text-accent" />
-                <span className="text-sm">contact@thapar.edu</span>
+                <a href="mailto:mamta.gulati@thapar.edu" className="text-sm hover:text-primary transition-colors">
+                  mamta.gulati@thapar.edu
+                </a>
               </li>
             </ul>
           </div>
@@ -102,10 +105,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t border-white/10 pt-8 text-center text-sm text-muted-foreground flex flex-col items-center gap-2">
           <p>
             © {new Date().getFullYear()} ThaparSat. All rights reserved. |
             Inaugurated January 31, 2020
+          </p>
+          <p className="text-xs text-muted-foreground/60">
+            Developed by Bhumit Gupta & Jayant Batra
           </p>
         </div>
       </div>

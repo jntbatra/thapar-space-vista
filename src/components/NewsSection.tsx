@@ -4,37 +4,39 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const NewsSection = () => {
-  // Mock news data - will be replaced with backend data
   const newsItems = [
     {
       id: 1,
-      title: "ThaparSat Successfully Tracks Cyclone Formation",
+      title: "Monitoring Atmospheric Greenhouse Gases",
       excerpt:
-        "Our satellite successfully monitored and provided critical data during the June 2023 cyclone event over Northern India.",
-      date: "June 25, 2023",
+        "Thapar Satellite Program (ThaparSat) is developing a Mid-Wave Infrared (MWIR) imaging payload to monitor atmospheric greenhouse gases.",
+      date: "July 2026",
       image:
-        "https://images.unsplash.com/photo-1584291527935-456e8e2dd734?q=80&w=2070",
-      category: "Achievement",
+        "https://media.licdn.com/dms/image/v2/D5622AQEC0xIwfExdIg/feedshare-shrink_800/B56Z9FOnCfIMAc-/0/1783572886071?e=2147483647&v=beta&t=3hUC6LZHQimQF5zHuQd5TKV3xdfhpbwTyJXNsWv1QYQ",
+      category: "Innovation",
+      link: "https://www.linkedin.com/posts/thaparinstitute-tiet-thaparsat-ugcPost-7480846898011009025-JJx2/"
     },
     {
       id: 2,
-      title: "New Ground Station Capabilities Unveiled",
+      title: "Journey to Low Earth Orbit",
       excerpt:
-        "Enhanced monitoring capabilities at TIET Patiala ground station enable real-time environmental data processing.",
-      date: "May 15, 2023",
+        "Built at TIET, monitored through the Patiala Ground Station, and tracked by ISRO via the Satish Dhawan Space Centre.",
+      date: "July 2026",
       image:
-        "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2070",
-      category: "Technology",
+        "https://media.licdn.com/dms/image/v2/D5622AQGn3wBF3qhh2A/feedshare-shrink_800/B56Z9FOmLcJoAg-/0/1783572882503?e=2147483647&v=beta&t=tk8DRmU3xoaazNRF3oRICoccQONIT6fBYD7SeioZIMA",
+      category: "Mission",
+      link: "https://www.linkedin.com/posts/thaparinstitute-tiet-thaparsat-ugcPost-7480846898011009025-JJx2/"
     },
     {
       id: 3,
-      title: "Partnership with Punjab Government Departments",
+      title: "Future Environmental Applications",
       excerpt:
-        "ThaparSat data now integrated with state departments for agricultural and environmental policy decisions.",
-      date: "April 8, 2023",
+        "Advancing research with future applications in soil moisture measurement and forest fire detection for meaningful environmental impact.",
+      date: "July 2026",
       image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072",
-      category: "Collaboration",
+        "https://media.licdn.com/dms/image/v2/D5622AQEVbZWKBhRtRg/feedshare-shrink_800/B56Z9FOlF9HYAc-/0/1783572878012?e=2147483647&v=beta&t=2EzGhpymzu3fGbFvkbA-pjNCvMB55KTQKrYEIJjztrQ",
+      category: "Research",
+      link: "https://www.linkedin.com/posts/thaparinstitute-tiet-thaparsat-ugcPost-7480846898011009025-JJx2/"
     },
   ];
 
@@ -96,14 +98,16 @@ const NewsSection = () => {
                 <p className="text-muted-foreground mb-4 line-clamp-2">
                   {item.excerpt}
                 </p>
-                <Button
-                  variant="ghost"
-                  className="group/btn p-0 h-auto text-accent hover:text-accent/80"
-                  aria-label={`Read more about ${item.title}`}
-                >
-                  Read More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="ghost"
+                    className="group/btn p-0 h-auto text-accent hover:text-accent/80"
+                    aria-label={`Read more about ${item.title}`}
+                  >
+                    Read More
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </CardContent>
             </article>
           ))}
