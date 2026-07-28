@@ -1,4 +1,5 @@
-import { Satellite, Mail, MapPin, Phone } from "lucide-react";
+import { Satellite, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,14 +31,19 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["Home", "Team", "News"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
+              {[
+                { label: "Home", href: "/" },
+                { label: "Team", href: "/team" },
+                { label: "News", href: "/news" },
+                { label: "Infrastructure", href: "/infra" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

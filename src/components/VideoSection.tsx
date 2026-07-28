@@ -1,9 +1,7 @@
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from "@/components/ui/card";
 import { Play, Youtube } from "lucide-react";
 import { useState } from "react";
@@ -59,18 +57,23 @@ const VideoSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {videos.map((video, index) => (
-            <Card
+            <button
               key={video.id}
-              className="overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer animate-fade-in"
+              type="button"
+              className="overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer animate-fade-in text-left rounded-xl"
               style={{ animationDelay: `${index * 150}ms` }}
               onClick={() => setActiveVideo(video.id)}
+              aria-label={`Play video: ${video.title}`}
             >
-              <div className="relative aspect-video overflow-hidden bg-muted">
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <Card>
+                <div className="relative aspect-video overflow-hidden bg-muted">
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
+                  />
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
@@ -86,14 +89,15 @@ const VideoSection = () => {
                 <div className="absolute bottom-4 right-4 px-2 py-1 rounded bg-black/80 text-white text-xs font-medium">
                   {video.duration}
                 </div>
-              </div>
+                </div>
 
-              <CardHeader>
-                <CardTitle className="text-lg group-hover:text-red-600 transition-colors">
-                  {video.title}
-                </CardTitle>
-              </CardHeader>
-            </Card>
+                <CardHeader>
+                  <CardTitle className="text-lg group-hover:text-red-600 transition-colors">
+                    {video.title}
+                  </CardTitle>
+                </CardHeader>
+              </Card>
+            </button>
           ))}
         </div>
 
@@ -103,7 +107,15 @@ const VideoSection = () => {
             className="fixed inset-0 bg-background/95 backdrop-blur-lg z-50 flex items-center justify-center p-4 animate-fade-in"
             onClick={() => setActiveVideo(null)}
           >
-            <div className="max-w-5xl w-full aspect-video bg-card rounded-lg overflow-hidden border border-white/10">
+            <div className="relative max-w-5xl w-full aspect-video bg-card rounded-lg overflow-hidden border border-white/10">
+              <button
+                type="button"
+                className="absolute top-4 right-4 z-10 rounded-md bg-black/70 px-3 py-1 text-sm text-white"
+                onClick={() => setActiveVideo(null)}
+                aria-label="Close video modal"
+              >
+                Close
+              </button>
               <iframe
                 width="100%"
                 height="100%"

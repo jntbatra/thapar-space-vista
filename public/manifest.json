@@ -1,0 +1,25 @@
+{
+  "name": "ThaparSAT",
+  "short_name": "ThaparSAT",
+  "description": "ThaparSAT is the official student platform for Thapar Institute of Engineering and Technology (TIET), connecting students with campus events, clubs, opportunities, resources, and announcements.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0f172a",
+  "lang": "en-IN",
+  "categories": ["education", "community"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

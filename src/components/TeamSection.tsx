@@ -11,7 +11,6 @@ import prashantRana from "@/assets/dr-prashant-singh-rana.jpg";
 import rajeshKhanna from "@/assets/dr-rajesh-khanna.webp";
 import hemJoshi from "@/assets/dr-hem-dutt-joshi.webp";
 import bharatGarg from "@/assets/dr-bharat-garg.jpg";
-import { Calendar, ArrowRight } from "lucide-react";
 
 const TeamSection = () => {
   const mentors = [
@@ -95,6 +94,8 @@ const TeamSection = () => {
                   src={mentor.image}
                   alt={mentor.name}
                   className="w-full h-80 object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-foreground">
